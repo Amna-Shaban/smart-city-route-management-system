@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connect Cities</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>Connect Cities</h1>
+
+<div class="container">
+
+    <form method="POST">
+
+        <label>City 1</label>
+        <select name="city1">
+            {% for city in cities %}
+            <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+
+        <label>City 2</label>
+        <select name="city2">
+            {% for city in cities %}
+            <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Connect</button>
+
+    </form>
+
+    <a href="/">Back to Home</a>
+
+</div>
+
+</body>
+</html>

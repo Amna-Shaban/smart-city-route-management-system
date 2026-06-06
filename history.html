@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Routes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>Recent Routes (Stack)</h1>
+
+<div class="container">
+
+    {% if routes %}
+        <ul>
+            {% for r in routes %}
+                <li>{{ r }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No routes found yet.</p>
+    {% endif %}
+
+    <a href="/">Back to Home</a>
+
+</div>
+
+</body>
+</html>

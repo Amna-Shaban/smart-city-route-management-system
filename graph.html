@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph View</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>City Graph</h1>
+
+<div class="container">
+
+{% for city, neighbors in graph.items() %}
+    <p><b>{{ city }}</b> → {{ neighbors }}</p>
+{% endfor %}
+
+</div>
+
+</body>
+</html>
